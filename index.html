@@ -11,11 +11,11 @@
     <h1>Aayushi Puri</h1>
     <nav>
       <ul>
-        <li><a href="#cv">CV</a></li>
+        <li><a href="#intro">Home</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#visualizations">Visualizations</a></li>
       </ul>
     </nav>
   </header>
@@ -47,6 +47,7 @@
       <li>Data Visualization (Matplotlib, Seaborn, Plotly)</li>
       <li>Database Management (SQL, MongoDB)</li>
       <li>Version Control (Git, GitHub)</li>
+      <!-- Add more skills as necessary -->
     </ul>
   </section>
 
@@ -62,15 +63,15 @@
     <div id="myPlot" style="width:100%;max-width:700px;"></div>
   </section>
 
-  <footer id="contact">
+  <footer>
     <h2>📧 Contact Me</h2>
     <form action="mailto:meaayushipuri@gmail.com" method="POST" enctype="text/plain">
       <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br><br>
+      <input type="text" id="name" name="name" aria-label="Name"><br><br>
       <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br><br>
+      <input type="email" id="email" name="email" aria-label="Email"><br><br>
       <label for="message">Message:</label><br>
-      <textarea id="message" name="message"></textarea><br><br>
+      <textarea id="message" name="message" aria-label="Message"></textarea><br><br>
       <input type="submit" value="Send">
     </form>
     <p>You can also connect with me on:</p>
@@ -91,12 +92,10 @@
     };
     var data = [trace1];
     Plotly.newPlot('myPlot', data);
-  </script>
-  <script>
+
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
   </script>
-
 </body>
 </html>
