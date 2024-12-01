@@ -100,190 +100,138 @@
 </body>
 </html>
  -->
- <!DOCTYPE html>
-<html lang="en">
+<!-- Add a Hamburger Menu -->
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+  }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aayushi Puri - Machine Learning and Data Science</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* General Styling */
-    body {
-      margin: 0;
-      font-family: 'Times New Roman', serif;
-    }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
 
-    /* Background Styling */
-    #hero {
-      background: linear-gradient(to bottom right, #ffcccc, #ffcce6);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    #hero h1 {
-      font-size: 4rem;
-      margin: 0;
-    }
-
-    #hero a.cta {
-      margin-top: 20px;
-      padding: 10px 20px;
-      color: white;
-      background-color: #ff6699;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background-color 0.3s ease;
-    }
-
-    #hero a.cta:hover {
-      background-color: #cc0066;
-    }
-
-    /* Header Styling */
-    header {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 20px 10%;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
+  @media (max-width: 768px) {
     nav ul {
-      list-style: none;
-      padding: 0;
+      display: none;
+      flex-direction: column;
+    }
+
+    nav ul.active {
       display: flex;
-      justify-content: space-around;
     }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
+    .hamburger {
+      display: block;
     }
+  }
+</style>
 
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
+<!-- Add to Header -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<script>
+  function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+  }
+</script>
+<!-- Add Smooth Scroll Behavior -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+<!-- Include Plotly -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    /* Section Styling */
-    section {
-      padding: 60px 10%;
-    }
+<!-- Visualization Script -->
+<script>
+  const data = [{
+    x: ['Project A', 'Project B', 'Project C'],
+    y: [20, 14, 23],
+    type: 'bar'
+  }];
 
-    #services, #portfolio, #skills, #education, #visualizations {
-      background-color: #f9f9f9;
-      margin: 20px 0;
-    }
+  const layout = {
+    title: 'Project Contributions',
+    xaxis: { title: 'Projects' },
+    yaxis: { title: 'Hours Spent' }
+  };
 
-    h2 {
-      font-size: 2.5rem;
-      color: #333;
-      margin-bottom: 20px;
-    }
+  Plotly.newPlot('myPlot', data, layout);
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    /* Footer */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+<h2><i class="fas fa-laptop-code"></i> Skills & Tools</h2>
+<!-- Portfolio Styling -->
+<style>
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
 
-    footer ul {
-      list-style: none;
-      padding: 0;
-    }
+  .portfolio-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
 
-    footer ul li a {
-      color: #ff6699;
-      text-decoration: none;
-    }
+  .portfolio-grid img:hover {
+    transform: scale(1.05);
+  }
+</style>
 
-    footer ul li a:hover {
-      text-decoration: underline;
-    }
+<!-- Portfolio Section -->
+<div class="portfolio-grid">
+  <img src="project1.jpg" alt="Project 1">
+  <img src="project2.jpg" alt="Project 2">
+  <img src="project3.jpg" alt="Project 3">
+</div>
+<style>
+  body.dark-mode {
+    background-color: #222;
+    color: #eee;
+  }
 
-    footer form input, footer form textarea {
-      width: 90%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+  body.dark-mode header, body.dark-mode footer {
+    background-color: #444;
+  }
+</style>
 
-    footer form input[type="submit"] {
-      background-color: #ff6699;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+<!-- Toggle Button -->
+<button id="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+<style>
+  .animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
 
-    footer form input[type="submit"]:hover {
-      background-color: #cc0066;
-    }
-  </style>
-</head>
+  .animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 
-<body>
-  <!-- Hero Section -->
-  <section id="hero">
-    <div>
-      <h1>Hello, I’m Aayushi!</h1>
-      <p>A computer engineering student with a passion for Machine Learning and Data Science.</p>
-      <a href="#portfolio" class="cta">Explore My Portfolio</a>
-    </div>
-  </section>
+<!-- Add Animation Script -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
 
-  <!-- Header -->
-  <header>
-    <h1>Aayushi Puri</h1>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#visualizations">Visualizations</a></li>
-      </ul>
-    </nav>
-  </header>
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+</script>
 
-  <!-- Remaining Sections -->
-  <section id="portfolio">
-    <h2>📁 Portfolio</h2>
-    <p>Projects and works go here...</p>
-  </section>
-
-  <section id="skills">
-    <h2>🛠️ Skills & Tools</h2>
-    <p>Skills list goes here...</p>
-  </section>
-
-  <section id="education">
-    <h2>🎓 Education</h2>
-    <p>Education details go here...</p>
-  </section>
-
-  <section id="visualizations">
-    <h2>📊 Interactive Visualizations</h2>
-    <div id="myPlot"></div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Aayushi Puri</p>
-  </footer>
-</body>
-
-</html>
+<!-- Apply Animation Class -->
+<section id="skills" class="animate">...</section>
