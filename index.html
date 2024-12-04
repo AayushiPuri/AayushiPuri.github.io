@@ -28,6 +28,7 @@
     <h2>📁 Portfolio</h2>
     <p>Check out some of my projects below, and feel free to download my resume for more details!</p>
     
+    <!-- Link to Resume in Portfolio -->
     <p><a href="https://drive.google.com/file/d/1Lytdbce0K4E8Ok06lk8_vOKfINLYipY9/view?usp=drive_link" target="_blank">📄 Download My Resume</a></p>
     
     <div class="project">
@@ -38,7 +39,7 @@
     
     <div class="project">
       <h3>Project 2: Face Mask Detection</h3>
-      <p>Detected masks on faces using OpenCV.</p>
+      <p>Detected masks on face.</p>
       <a href="https://github.com/AayushiPuri/Face_mask_detection" target="_blank">View on GitHub</a>
     </div>
   </section>
@@ -61,20 +62,15 @@
     <p>Relevant Courses: Machine Learning, Data Science, Artificial Intelligence, Computer Vision</p>
   </section>
 
-  <section id="visualizations">
-    <h2>📊 Interactive Visualizations</h2>
-    <div id="myPlot" style="width:100%;max-width:700px;"></div>
-  </section>
-
   <footer>
     <h2>📧 Contact Me</h2>
-    <form action="mailto:meaayushipuri@gmail.com" method="GET" enctype="text/plain">
+    <form action="mailto:meaayushipuri@gmail.com" method="POST" enctype="text/plain">
       <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" aria-label="Name" required><br><br>
+      <input type="text" id="name" name="name" aria-label="Name"><br><br>
       <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" aria-label="Email" required><br><br>
+      <input type="email" id="email" name="email" aria-label="Email"><br><br>
       <label for="message">Message:</label><br>
-      <textarea id="message" name="message" aria-label="Message" required></textarea><br><br>
+      <textarea id="message" name="message" aria-label="Message"></textarea><br><br>
       <input type="submit" value="Send">
     </form>
     <p>You can also connect with me on:</p>
@@ -82,21 +78,12 @@
       <li><a href="https://www.linkedin.com/in/aayushi-puri-2aa787246">LinkedIn</a></li>
       <li><a href="https://github.com/AayushiPuri">GitHub</a></li>
       <li><a href="https://www.kaggle.com/aayushi03puri">Kaggle</a></li>
-      <li><a href="https://www.instagram.com/aayushi.puri">Instagram</a></li>
+      <li><a href="https://www.instagram.com/aayushi03puri">Instagram</a></li>
     </ul>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">Toggle Dark Mode</button>
   </footer>
 
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script>
-    var trace1 = {
-      x: [1, 2, 3, 4, 5],
-      y: [1, 2, 4, 8, 16],
-      mode: 'lines'
-    };
-    var data = [trace1];
-    Plotly.newPlot('myPlot', data);
-
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
