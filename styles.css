@@ -16,6 +16,7 @@ header {
 header h1 {
     font-size: 2.5em;
     margin: 0;
+    color: #333; /* Ensure header text has a readable color */
 }
 
 nav ul {
@@ -32,6 +33,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black; /* Navigation link color */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6699; /* Hover effect for navigation links */
 }
 
 #intro {
@@ -69,6 +76,11 @@ footer ul li {
 footer ul li a {
     text-decoration: none;
     color: black; /* Footer link color */
+    font-size: 1.1em;
+}
+
+footer ul li a:hover {
+    color: #ff6699; /* Hover effect for footer links */
 }
 
 .dark-mode {
@@ -85,6 +97,19 @@ footer ul li a {
     color: white;
 }
 
+.dark-mode nav ul li a:hover {
+    color: #ff6699;
+}
+
 .dark-mode #intro {
     background-color: #444;
+    color: white;
+}
+
+.dark-mode #portfolio, 
+.dark-mode #skills, 
+.dark-mode #education, 
+.dark-mode #visualizations {
+    background-color: #555;
+    color: white;
 }
