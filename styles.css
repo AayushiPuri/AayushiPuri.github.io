@@ -16,7 +16,7 @@ header {
 header h1 {
     font-size: 2.5em;
     margin: 0;
-    color: #333; /* Ensure header text has a readable color */
+    color: #333;
 }
 
 nav ul {
@@ -32,23 +32,23 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black; /* Navigation link color */
+    color: black;
     font-size: 1.1em;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: #ff6699; /* Hover effect for navigation links */
+    color: #ff6699;
 }
 
 #intro {
     padding: 50px;
     text-align: center;
     background-color: #ffe6e6;
-    color: black; /* Font color for intro section */
+    color: black;
 }
 
-#portfolio, #skills, #education, #visualizations {
+#portfolio, #skills, #education {
     padding: 50px;
     background-color: #f8f8f8;
 }
@@ -75,12 +75,12 @@ footer ul li {
 
 footer ul li a {
     text-decoration: none;
-    color: black; /* Footer link color */
+    color: black;
     font-size: 1.1em;
 }
 
 footer ul li a:hover {
-    color: #ff6699; /* Hover effect for footer links */
+    color: #ff6699;
 }
 
 .dark-mode {
@@ -98,18 +98,27 @@ footer ul li a:hover {
 }
 
 .dark-mode nav ul li a:hover {
-    color: #ff6699;
+    color: #ff99cc;
 }
 
 .dark-mode #intro {
     background-color: #444;
-    color: white;
+    color: #ddd;
 }
 
 .dark-mode #portfolio, 
 .dark-mode #skills, 
-.dark-mode #education, 
-.dark-mode #visualizations {
+.dark-mode #education {
     background-color: #555;
     color: white;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
