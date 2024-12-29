@@ -11,54 +11,32 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **B.E. in Computer Engineering**  
+  * Thapar Institute of Engineering and Technology, 2024 (expected)  
+  * Relevant Courses: Machine Learning, Data Science, Artificial Intelligence, Neural Networks  
+  * Current GPA: 7.35
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Programming Languages**: Python, C/C++  
+* **Machine Learning Tools**: TensorFlow, Keras, Scikit-learn  
+* **Data Analysis & Visualization**: Pandas, Matplotlib, Seaborn
 
-Publications
+Projects
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* **Face Mask Detector**  
+  * Developed a deep learning model to detect face masks in real-time  
+  * Achieved high accuracy using CNNs and TensorFlow  
+
+* **Stock Price Prediction**  
+  * Built a regression model to predict stock prices using historical data  
+  * Focused on data preprocessing and feature engineering  
+
+* **Virtual Mouse Using Hand Gestures**  
+  * Designed a contactless mouse control system using hand gestures and computer vision  
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* **Hostel G Proctor**: Coordinated hostel activities and addressed students' concerns  
+* **Event Organizer**: Managed events during college fests and hackathons  
