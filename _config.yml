@@ -12,7 +12,7 @@ title                    : "Aayushi's Homepage"
 title_separator          : "-"
 name                     : &name "Aayushi Puri"
 description              : &description "Welcome to My Portfolio, I’m Aayushi Puri, a passionate Computer Engineering student with a deep interest in Machine Learning, Data Science, and Data Analysis. My portfolio showcases the projects, research, and experiences that reflect my journey in the tech world, where I combine creativity with analytical thinking to solve real-world problems."
-url                      : "https://aayushi_puri.github.io"
+url                      : "https://aayushipuri.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 
