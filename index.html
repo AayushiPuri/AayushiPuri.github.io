@@ -1,125 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aayushi Puri - Portfolio</title>
-    <style>
-        /* General Reset */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Times New Roman", serif;
-            background-color: #fdf0f5;
-            color: #000;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #f8cdda;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: #000;
-        }
-
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #f8cdda;
-            padding-bottom: 5px;
-        }
-
-        .about {
-            text-align: center;
-        }
-
-        .about img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        .social-icons {
-            margin: 10px 0;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #000;
-            font-size: 1.5rem;
-        }
-
-        .social-icons a:hover {
-            color: #f06292;
-        }
-
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .portfolio-item {
-            background-color: #fff;
-            border: 1px solid #f8cdda;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .portfolio-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #f8cdda;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .portfolio {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -128,13 +13,13 @@
 
     <section id="about">
         <div class="container">
-            <img src="profile.jpg" alt="Aayushi Puri" class="profile-img">
+            <img src="images/profile.jpeg" alt="Aayushi Puri" class="profile-img">
             <h2>About Me</h2>
             <p>"I’m Aayushi Puri, a passionate Computer Engineering student specializing in Machine Learning and Data Science. I love solving real-world problems with data-driven solutions and thrive on challenges that push my analytical and technical skills. My work combines the power of AI, deep learning, and computer vision to create impactful projects."</p>
             <div class="social-links">
-                <a href="https://github.com/aayushipuri" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/aayushipuri" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.kaggle.com/aayushi03puri" target="_blank"><i class="fab fa-kaggle"></i></a>
+                <a href="https://github.com/aayushipuri" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/aayushipuri" target="_blank">LinkedIn</a>
+                <a href="https://www.kaggle.com/aayushi03puri" target="_blank">Kaggle</a>
             </div>
         </div>
     </section>
@@ -144,14 +29,14 @@
             <h2>Portfolio</h2>
             <div class="projects">
                 <div class="project">
-                    <img src="project1.jpg" alt="Project 1">
+                    <img src="images/project1.jpg" alt="Project 1">
                     <h3>LipSyncX – AI-powered Lip Reading</h3>
-                    <p>Built an advanced deep learning model that converts lip movements into text. Used Transformers, Computer Vision, and LLMs for accurate transcription. Improved communication for hearing-impaired individuals</p>
+                    <p>Built an advanced deep-learning model that converts lip movements into text. Used Transformers, Computer Vision, and LLMs for accurate transcription. Improved communication for hearing-impaired individuals.</p>
                 </div>
                 <div class="project">
-                    <img src="project2.jpg" alt="Project 2">
+                    <img src="images/project2.jpg" alt="Project 2">
                     <h3>Stock Price Prediction</h3>
-                    <p>Developed a time series forecasting model for predicting stock prices. Preprocessed data using normalization, missing value handling, and feature engineering</p>
+                    <p>Developed a time series forecasting model for predicting stock prices. Preprocessed data using normalization, missing value handling, and feature engineering.</p>
                 </div>
             </div>
         </div>
@@ -171,6 +56,7 @@
             <a href="resume.pdf" download class="btn">Download Resume</a>
         </div>
     </section>
+
     <section id="contact">
         <div class="container">
             <h2>Contact Me</h2>
@@ -182,19 +68,21 @@
             </form>
         </div>
     </section>
-     <section class="blog-section">
-            <h2>Blog</h2>
-            <div class="blog-post">
-                <h3>Breaking Down Transformers in Deep Learning</h3>
-                <p>An in-depth explanation of how Transformers revolutionized NLP and other domains. <a href="#">Read More</a></p>
-            </div>
-            <div class="blog-post">
-                <h3>How I Built an AI Model for Lip Reading</h3>
-                <p>Insights and techniques used to create LipSyncX. <a href="#">Read More</a></p>
-            </div>
-        </section>
+
+    <section class="blog-section">
+        <h2>Blog</h2>
+        <div class="blog-post">
+            <h3>Breaking Down Transformers in Deep Learning</h3>
+            <p>An in-depth explanation of how Transformers revolutionized NLP and other domains. <a href="#">Read More</a></p>
+        </div>
+        <div class="blog-post">
+            <h3>How I Built an AI Model for Lip Reading</h3>
+            <p>Insights and techniques used to create LipSyncX. <a href="#">Read More</a></p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Aayushi Puri</p>
+        <p>&copy; 2025 Aayushi Puri, All Rights Reserved</p>
     </footer>
 </body>
 </html>
