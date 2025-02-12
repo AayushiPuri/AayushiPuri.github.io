@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Dark Mode Toggle
     const darkModeToggle = document.createElement("button");
-    darkModeToggle.innerText = "🌙 Toggle Dark Mode";
+    darkModeToggle.innerText = localStorage.getItem("darkMode") === "true" ? "☀️ Light Mode" : "🌙 Dark Mode";
     darkModeToggle.style.position = "fixed";
     darkModeToggle.style.top = "10px";
     darkModeToggle.style.right = "10px";
@@ -13,25 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
     darkModeToggle.style.cursor = "pointer";
     document.body.appendChild(darkModeToggle);
 
-    function updateButtonText() {
-    darkModeToggle.innerText = document.body.classList.contains("dark-mode") 
-        ? "☀️ Light Mode" 
-        : "🌙 Dark Mode";}
-
     function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-    updateButtonText();}
-
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDark);
+        darkModeToggle.innerText = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
 
     darkModeToggle.addEventListener("click", toggleDarkMode);
 
     // Preserve Dark Mode setting
     if (localStorage.getItem("darkMode") === "true") {
-    document.body.classList.add("dark-mode");
+        document.body.classList.add("dark-mode");
     }
-    updateButtonText();
-
 
     // Scroll Animations (Reveal sections on scroll)
     const sections = document.querySelectorAll(".fade-in");
