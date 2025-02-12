@@ -6,40 +6,41 @@
 }
 
 body {
-    font-family: "Poppins", serif;
-    background-color: #fdf0f5;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, #fdf0f5, #ffffff);
     color: #000;
     line-height: 1.6;
-}
-body {
-    background: linear-gradient(to bottom, #fdf0f5, #ffffff);
+    text-align: center;
 }
 
+/* Header */
 header {
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 100;
     background: linear-gradient(to right, #ff7200, #f8cdda);
-    text-align: center;
     padding: 20px 0;
     color: #fff;
-    text-align: center;
 }
+
 .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
+
+/* Profile Image */
 .profile-img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Buttons */
 .btn {
     display: inline-block;
     background: linear-gradient(to right, #ff7200, #f06292);
@@ -54,33 +55,29 @@ header {
     transform: scale(1.05);
 }
 
-header h1 {
-    font-size: 2.5rem;
-}
-
-main {
-    text-align: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
+/* Sections */
 section {
-    margin-bottom: 40px;
-    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
-    text-align: center;
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-bottom: 2px solid #f8cdda;
     padding-bottom: 5px;
 }
 
+/* About Section */
 .about {
     text-align: center;
 }
+
 .social-links a {
     margin: 0 10px;
     text-decoration: none;
@@ -91,26 +88,27 @@ section h2 {
 
 .social-links a:hover {
     color: #f06292;
-    text-align: center;
 }
+
+/* Resume Section */
 #resume {
     padding: 20px;
 }
 
-#resume h3 {
-    margin-top: 15px;
-}
-
 #resume ul {
-    padding: 15px;
+    padding: 20px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: inline-block;
 }
 
+/* Portfolio Section */
 .portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -118,7 +116,8 @@ section h2 {
     background-color: #fff;
     border: 1px solid #f8cdda;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
+    width: 300px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -130,33 +129,98 @@ section h2 {
 }
 
 .project img {
-    width: 100%;  /* Makes image fit the container */
-    height: 200px; /* Keeps consistent height */
-    object-fit: cover; /* Ensures images don’t stretch */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
+/* Contact Form */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact .container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+form button {
+    width: 100%;
+    max-width: 200px;
+    background-color: #ff7200;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #f06292;
+}
+
+/* Blog Section */
+.blog-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #fdf0f5;
+    border-radius: 10px;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     background-color: #ff7200;
     color: #fff;
 }
+
+/* Fade-in Effect - Now Starts Visible */
+.fade-in {
+    opacity: 1; /* Changed from 0 to 1 */
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         padding: 10px;
     }
-    .project {
-        padding: 10px;
-    }
+
     .portfolio {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .project img {
-        height: 150px;
+
+    .project {
+        width: 100%;
     }
+
     .dark-mode-toggle {
         top: 15px;
         right: 15px;
@@ -165,46 +229,33 @@ footer {
     }
 }
 
-body.dark-mode{
+/* Dark Mode */
+body.dark-mode {
     background-color: #121212;
     color: white;
 }
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #ff7200;
+body.dark-mode #resume ul {
+    background: #222;
     color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-form button:hover {
+body.dark-mode .project {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode form button {
+    background-color: #ff7200;
+}
+
+body.dark-mode form button:hover {
     background-color: #f06292;
-}
-.blog-section {
-    text-align: center;
-    padding: 40px;
-    background-color: #fdf0f5;
-    border-radius: 10px;
-}
-html {
-    scroll-behavior: smooth;
 }
