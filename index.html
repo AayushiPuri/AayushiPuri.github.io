@@ -19,7 +19,7 @@
             <h2>About Me</h2>
             <p>"I’m Aayushi Puri, a passionate Computer Engineering student specializing in Machine Learning and Data Science. I love solving real-world problems with data-driven solutions and thrive on challenges that push my analytical and technical skills. My work combines the power of AI, deep learning, and computer vision to create impactful projects."</p>
             <div class="social-links">
-                <p>Here are my social links you can explore </p>
+                <p>Here are my social links </p>
                 <a href="https://github.com/aayushipuri" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/aayushi-puri-2aa787246/" target="_blank">LinkedIn</a>
                 <a href="https://www.kaggle.com/aayushi03puri" target="_blank">Kaggle</a>
@@ -49,27 +49,48 @@
         <div class="container" class="fade-in">
             <h2>Resume</h2>
             <a href="resume.pdf" download class="btn">Download Resume</a>
-            <h3>Technical Skills:</h3>
+            <h3>Technical Skills</h3>
             <ul>
-                <li>Machine Learning | Deep Learning | NLP</li>
-                <li>Python (Pandas, NumPy, Scikit-Learn, TensorFlow, OpenCV)</li>
-                <li>SQL | Data Analysis | Visualization</li>
+                <li> Python | C/C++ | SQL</li>
+                <li> Machine Learning | Deep Learning | NLP</li>
+                <li> Python (Pandas, NumPy, Scikit-Learn, TensorFlow, OpenCV)</li>
+                <li> Data Analysis | Visualization</li>
             </ul>
         </div>
     </section>
 
     <section id="contact" class="fade-in">
     <div class="container">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                  <button type="submit">Send</button>
-            </form>
-            <p id="formMessage" style="color: green; display: none;">Message Sent Successfully!</p>
-        </div>
-    </section>
+        <h2>Contact Me</h2>
+        
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        
+        <a id="emailLink">
+            <button onclick="sendEmail()">Send</button>
+        </a>
+    </div>
+</section>
+
+<script>
+  function sendEmail() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (!name || !email || !message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    let mailtoLink = `mailto:aayushipuri03@gmail.com?subject=Website Inquiry&body=Hello,%0D%0AMy Name: ${encodeURIComponent(name)}%0D%0AMy Email: ${encodeURIComponent(email)}%0D%0AMessage: ${encodeURIComponent(message)}`;
+
+    document.getElementById("emailLink").setAttribute("href", mailtoLink);
+    document.getElementById("emailLink").click();
+  }
+</script>
+
 
 
     <section class="blog-section">
