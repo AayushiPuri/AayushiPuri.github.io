@@ -26,7 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("darkMode") === "true") {
         document.body.classList.add("dark-mode");
     }
+    const form = document.getElementById("contactForm");
 
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevents the form from actually submitting
+
+        // Simulate a form submission success message
+        document.getElementById("formMessage").style.display = "block";
+
+        // Clear the form fields after submission
+        form.reset();
+    });
     // Scroll Animations (Reveal sections on scroll)
     const sections = document.querySelectorAll(".fade-in");
 
