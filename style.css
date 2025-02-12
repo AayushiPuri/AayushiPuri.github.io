@@ -25,6 +25,20 @@ header {
     padding: 20px 0;
     color: #fff;
 }
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .btn {
     display: inline-block;
     background: linear-gradient(to right, #ff7200, #f06292);
@@ -63,16 +77,6 @@ section h2 {
 .about {
     text-align: center;
 }
-
-.profile-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .social-links a {
     margin: 0 10px;
     text-decoration: none;
@@ -83,6 +87,20 @@ section h2 {
 
 .social-links a:hover {
     color: #f06292;
+}
+#resume {
+    padding: 20px;
+}
+
+#resume h3 {
+    margin-top: 15px;
+}
+
+#resume ul {
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio {
@@ -124,14 +142,21 @@ footer {
         flex-direction: column;
         padding: 10px;
     }
-
-    .about img {
-        width: 120px;
-        height: 120px;
-    }
-
     .project {
         padding: 10px;
+    }
+    .portfolio {
+        grid-template-columns: 1fr;
+    }
+    
+    .project img {
+        height: 150px;
+    }
+    .dark-mode-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 8px;
+        font-size: 0.9rem;
     }
 }
 
