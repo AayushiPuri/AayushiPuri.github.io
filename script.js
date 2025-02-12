@@ -51,7 +51,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", checkVisibility);
     checkVisibility(); // Initial check
+    function sendEmail() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
 
+    if (!name || !email || !message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    let mailtoLink = `mailto:aayushipuri03@gmail.com?subject=Website Inquiry&body=Hello,%0D%0AMy Name: ${encodeURIComponent(name)}%0D%0AMy Email: ${encodeURIComponent(email)}%0D%0AMessage: ${encodeURIComponent(message)}`;
+
+    document.getElementById("emailLink").setAttribute("href", mailtoLink);
+    document.getElementById("emailLink").click();
+    }
     // Smooth Scrolling for Navigation Links
     const links = document.querySelectorAll("a[href^='#']");
 
