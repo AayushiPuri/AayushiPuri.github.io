@@ -13,17 +13,25 @@ document.addEventListener("DOMContentLoaded", function () {
     darkModeToggle.style.cursor = "pointer";
     document.body.appendChild(darkModeToggle);
 
+    function updateButtonText() {
+    darkModeToggle.innerText = document.body.classList.contains("dark-mode") 
+        ? "☀️ Light Mode" 
+        : "🌙 Dark Mode";}
+
     function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-        localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-    }
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+    updateButtonText();}
+
 
     darkModeToggle.addEventListener("click", toggleDarkMode);
 
     // Preserve Dark Mode setting
     if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
+    document.body.classList.add("dark-mode");
     }
+    updateButtonText();
+
 
     // Scroll Animations (Reveal sections on scroll)
     const sections = document.querySelectorAll(".fade-in");
