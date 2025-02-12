@@ -97,3 +97,12 @@ footer {
     background-color: #ff7200;
     color: #fff;
 }
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+}
+body.dark-mode{
+    background-color: #121212;
+    color: white;
+}
