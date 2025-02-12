@@ -65,10 +65,12 @@ section h2 {
 }
 
 .profile-img {
-   width: 100%;  /* Makes image fit the container */
-    height: 180px; /* Keeps consistent height */
-    object-fit: cover; /* Ensures images don’t stretch */
-    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social-links a {
@@ -105,10 +107,10 @@ section h2 {
 }
 
 .project img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100%;  /* Makes image fit the container */
+    height: 200px; /* Keeps consistent height */
+    object-fit: cover; /* Ensures images don’t stretch */
+    border-radius: 10px;
 }
 
 footer {
