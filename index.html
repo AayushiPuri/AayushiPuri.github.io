@@ -13,7 +13,7 @@
         <h1>Aayushi Puri</h1>
     </div>
 </header>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    
     <section id="about" class="fade-in">
         <div class="container">
             <h2>About Me</h2>
@@ -59,16 +59,18 @@
     </section>
 
     <section id="contact" class="fade-in">
-        <div class="container">
+    <div class="container">
             <h2>Contact Me</h2>
-            <form action="#" method="POST">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
+                  <button type="submit">Send</button>
             </form>
+            <p id="formMessage" style="color: green; display: none;">Message Sent Successfully!</p>
         </div>
     </section>
+
 
     <section class="blog-section">
         <h2>Blog</h2>
