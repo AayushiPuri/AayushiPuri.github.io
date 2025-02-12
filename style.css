@@ -6,17 +6,37 @@
 }
 
 body {
-    font-family: "Times New Roman", serif;
+    font-family: "Poppins", serif;
     background-color: #fdf0f5;
     color: #000;
     line-height: 1.6;
 }
+body {
+    background: linear-gradient(to bottom, #fdf0f5, #ffffff);
+}
 
 header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     background: linear-gradient(to right, #ff7200, #f8cdda);
     text-align: center;
     padding: 20px 0;
     color: #fff;
+}
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, #ff7200, #f06292);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
 
 header h1 {
@@ -65,7 +85,7 @@ section h2 {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -76,12 +96,12 @@ section h2 {
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project img {
@@ -97,12 +117,59 @@ footer {
     background-color: #ff7200;
     color: #fff;
 }
-@media (max-width: 768px){
-    .container{
+@media (max-width: 768px) {
+    .container {
         flex-direction: column;
+        padding: 10px;
+    }
+
+    .about img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project {
+        padding: 10px;
     }
 }
+
 body.dark-mode{
     background-color: #121212;
     color: white;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff7200;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #f06292;
+}
+.blog-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #fdf0f5;
+    border-radius: 10px;
 }
