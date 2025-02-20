@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayushi Puri - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-<script src="script.js"></script>
-
+    
 <body>
    <header>
     <div class="header-content">
@@ -31,18 +33,30 @@
     <section id="portfolio" class="fade-in">
         <div class="container">
             <h2>Portfolio</h2>
+              <div class="filter-buttons">
+                <button onclick="filterProjects('all')">All</button>
+                <button onclick="filterProjects('ml')">Machine Learning</button>
+                <button onclick="filterProjects('cv')">Computer Vision</button>
+                <button onclick="filterProjects('data')">Data Science</button>
+            </div>
             <div class="projects">
-                <div class="project">
+                <div class="project" data-category="cv">
                     <img src="project1.jpeg" alt="Project 1">
                     <h3>LipSyncX – AI-powered Lip Reading</h3>
-                    <p> Have you ever imagined a system that could 'listen' with its eyes? LipSyncX is precisely that—a groundbreaking innovation that turns silent lip movements into text, making communication possible even without sound. Inspired by a simple yet powerful real-life moment, this project bridges gaps, fosters connections, and brings the future of visual listening to life. Curious to see it in action? </p>
+                    <p> A groundbreaking innovation that turns silent lip movements into text, making communication possible even without sound.</p>
                     <a href="https://github.com/AayushiPuri/LipSyncX" target="_blank" rel="noopener noreferrer">Click here to see this project</a>
                 </div>
-                <div class="project">
+                <div class="project" data-category="data">
                     <img src="project2.jpeg" alt="Project 2">
                     <h3>Crop Yield Prediction</h3>
-                    <p>Imagine if farmers could foresee their harvest months in advance. Our Crop Yield Prediction Model turns this vision into reality—helping them plan better and reduce uncertainties for a more secure future.Our model empowers farmers with actionable insights, enabling better planning and resource allocation for improved agricultural outcomes. Curious to see it in action?</p>
+                    <p>Our Crop Yield Prediction Model turns this vision into reality—helping farmers plan better and reduce uncertainties for a more secure future.</p>
                     <a href="https://github.com/AayushiPuri/Crop-Yield-Prediction" target="_blank" rel="noopener noreferrer">Click here to see this project</a>
+                </div>
+                <div class="project" data-category="ml">
+                    <img src="project3.jpeg" alt="Project 3">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>A predictive model analyzing customer behavior to determine the likelihood of churn and help businesses retain users.</p>
+                    <a href="https://github.com/AayushiPuri/Customer-Churn" target="_blank" rel="noopener noreferrer">Click here to see this project</a>
                 </div>
             </div>
         </div>
@@ -51,6 +65,7 @@
     <section id="resume">
     <div class="container fade-in">
         <h2>Resume</h2>
+        <iframe src="resume.pdf" width="100%" height="500px"></iframe>
         <a href="resume.pdf" download class="btn">Download My Resume</a>
         <h3>Top Skills</h3>
         <ul>
@@ -78,7 +93,6 @@
       <h2>Contact Me</h2>
       <ul>
         <li>Email: <a href="mailto:aayushipuri03@gmail.com">aayushipuri03@gmail.com</a></li>
-        <li>Phone: <a href="tel:+917009617238">+91 70096-17238</a></li>
         <li>LinkedIn: <a href="https://www.linkedin.com/in/aayushi-puri-2aa787246/" target="_blank">https://www.linkedin.com/in/aayushi-puri-2aa787246/</a></li>
       </ul>
     </div>
@@ -87,8 +101,13 @@
     <section class="blog-section">
         <h2>Blog</h2>
         <div class="blog-post">
-            <h3>Blog</h3>
-            <p> Blog Coming soon... Stay tuned! </p>
+            <h3>Upcoming Topics</h3>
+            <ul>
+                <li>Understanding Neural Networks - A Beginner's Guide</li>
+                <li>Data Science Trends to Watch in 2025</li>
+                <li>Building a Machine Learning Model from Scratch</li>
+            </ul>
+            <p> Stay tuned for insightful content!</p>
         </div>
 
     </section>
