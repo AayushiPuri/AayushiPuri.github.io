@@ -26,17 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("darkMode") === "true") {
         document.body.classList.add("dark-mode");
     }
-    const form = document.getElementById("contactForm");
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevents the form from actually submitting
-
-        // Simulate a form submission success message
-        document.getElementById("formMessage").style.display = "block";
-
-        // Clear the form fields after submission
-        form.reset();
-    });
     // Scroll Animations (Reveal sections on scroll)
     const sections = document.querySelectorAll(".fade-in");
 
@@ -51,21 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", checkVisibility);
     checkVisibility(); // Initial check
-    function sendEmail() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
 
-    if (!name || !email || !message) {
-      alert("Please fill out all fields.");
-      return;
-    }
-
-    let mailtoLink = `mailto:aayushipuri03@gmail.com?subject=Website Inquiry&body=Hello,%0D%0AMy Name: ${encodeURIComponent(name)}%0D%0AMy Email: ${encodeURIComponent(email)}%0D%0AMessage: ${encodeURIComponent(message)}`;
-
-    document.getElementById("emailLink").setAttribute("href", mailtoLink);
-    document.getElementById("emailLink").click();
-    }
     // Smooth Scrolling for Navigation Links
     const links = document.querySelectorAll("a[href^='#']");
 
