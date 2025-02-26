@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('assets/backgroundphoto.png') no-repeat center center fixed;
+    background: url('images/backgroundphoto.png') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     line-height: 1.6;
