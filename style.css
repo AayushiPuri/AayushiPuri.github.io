@@ -1,7 +1,7 @@
 body {
     margin-left:20px;
     padding: 0;
-    background: url('/assets/backgroundphoto.png');
+    background: url('images/backgroundphoto.png');
     background-size: cover;
 }
 
@@ -566,7 +566,7 @@ html {
     body {
         margin-left:20px 50px;
         padding: 0;
-        background: url('assets/background.png') no-repeat center center fixed;
+        background: url('images/backgroundphoto.png') no-repeat center center fixed;
         background-size: cover;
     }
     
@@ -860,7 +860,7 @@ html {
         overflow: hidden;
         margin: 0 auto;
         order: -1; 
-        background-image: url('assets/mobileme.png'); 
+        background-image: url('images/mobileme.png'); 
         background-size: cover;
         background-position: center;
     }
