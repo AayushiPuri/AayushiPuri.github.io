@@ -1,11 +1,11 @@
-body {
-    margin-left:20px;
+body { 
+    margin-left: 20px;
     padding: 0;
-    position: relative;
-    z-index: -1;
-    background: url('/images/backgroundphoto.png')no-repeat center center fixed;
-    background-size: 100vw 100vh;
+    background: url('images/backgroundphoto.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll; /* Change from fixed to scroll */
 }
+
 
 /* NAVBAR */
 .navbar {
