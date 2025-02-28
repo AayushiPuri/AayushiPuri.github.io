@@ -1,7 +1,7 @@
 body { 
     margin-left: 20px;
     padding: 0;
-    background: url('images/backgroundphoto.png') no-repeat center center;
+    background: url('images/watercolor3.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: scroll; /* Change from fixed to scroll */
 }
